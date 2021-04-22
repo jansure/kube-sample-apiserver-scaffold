@@ -1,0 +1,550 @@
+I0422 21:44:54.901928   25749 plugins.go:84] "Registered admission plugin" plugin="BanFlunder"
+I0422 21:44:54.903351   25749 dynamic_serving_content.go:111] Loaded a new cert/key pair for "serving-cert::apiserver.local.config/certificates/apiserver.crt::apiserver.local.config/certificates/apiserver.key"
+I0422 21:44:55.216929   25749 loader.go:372] Config loaded from file:  /Users/jansure.zhang/.kube/config
+I0422 21:44:55.217691   25749 cert_rotation.go:137] Starting client certificate rotation controller
+I0422 21:44:55.220519   25749 dynamic_cafile_content.go:129] Loaded a new CA Bundle and Verifier for "client-ca-bundle::ca.crt"
+I0422 21:44:55.220754   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication
+I0422 21:44:55.220767   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.220775   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.220781   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.230557   25749 round_trippers.go:457] Response Status: 200 OK in 9 milliseconds
+I0422 21:44:55.230953   25749 requestheader_controller.go:244] Loaded a new request header values for RequestHeaderAuthRequestController
+I0422 21:44:55.231166   25749 loader.go:372] Config loaded from file:  /Users/jansure.zhang/.kube/config
+I0422 21:44:55.233495   25749 loader.go:372] Config loaded from file:  /Users/jansure.zhang/.kube/config
+I0422 21:44:55.237984   25749 plugins.go:158] Loaded 3 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,MutatingAdmissionWebhook,BanFlunder.
+I0422 21:44:55.237998   25749 plugins.go:161] Loaded 1 validating admission controller(s) successfully in the following order: ValidatingAdmissionWebhook.
+I0422 21:44:55.239975   25749 apf_controller.go:195] NewTestableController "Controller" with serverConcurrencyLimit=600, requestWaitLimit=15s, name=Controller, asFieldManager="api-priority-and-fairness-config-consumer-v1"
+I0422 21:44:55.240022   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"exempt","creationTimestamp":null},"spec":{"priorityLevelConfiguration":{"name":"exempt"},"matchingPrecedence":1,"rules":[{"subjects":[{"kind":"Group","group":{"name":"system:masters"}}],"resourceRules":[{"verbs":["*"],"apiGroups":["*"],"resources":["*"],"clusterScope":true,"namespaces":["*"]}],"nonResourceRules":[{"verbs":["*"],"nonResourceURLs":["*"]}]}]},"status":{}}
+I0422 21:44:55.240233   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"catch-all","creationTimestamp":null},"spec":{"priorityLevelConfiguration":{"name":"catch-all"},"matchingPrecedence":10000,"distinguisherMethod":{"type":"ByUser"},"rules":[{"subjects":[{"kind":"Group","group":{"name":"system:unauthenticated"}},{"kind":"Group","group":{"name":"system:authenticated"}}],"resourceRules":[{"verbs":["*"],"apiGroups":["*"],"resources":["*"],"clusterScope":true,"namespaces":["*"]}],"nonResourceRules":[{"verbs":["*"],"nonResourceURLs":["*"]}]}]},"status":{}}
+I0422 21:44:55.240254   25749 apf_controller.go:731] No exempt PriorityLevelConfiguration found, imagining one
+I0422 21:44:55.240268   25749 apf_controller.go:731] No catch-all PriorityLevelConfiguration found, imagining one
+I0422 21:44:55.240282   25749 apf_controller.go:635] Using exempt priority level "exempt": quiescing=false
+I0422 21:44:55.240290   25749 apf_controller.go:646] Introducing queues for priority level "catch-all": config={"type":"Limited","limited":{"assuredConcurrencyShares":5,"limitResponse":{"type":"Reject"}}}, concurrencyLimit=600, quiescing=false (shares=5, shareSum=5)
+I0422 21:44:55.240331   25749 apf_controller.go:494] Switched to new API Priority and Fairness configuration
+I0422 21:44:55.242397   25749 client.go:360] parsed scheme: "endpoint"
+I0422 21:44:55.242431   25749 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{http://127.0.0.1:2379  <nil> 0 <nil>}]
+I0422 21:44:55.242696   25749 once.go:66] CPU time info is unavailable on non-linux or appengine environment.
+I0422 21:44:55.243109   25749 client.go:360] parsed scheme: "endpoint"
+I0422 21:44:55.243128   25749 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{http://127.0.0.1:2379  <nil> 0 <nil>}]
+I0422 21:44:55.243446   25749 etcd3.go:276] Start monitoring storage db size metric for endpoint http://127.0.0.1:2379 with polling interval 30s
+I0422 21:44:55.243489   25749 storage_factory.go:53] Storage caching is enabled for *wardle.Flunder
+I0422 21:44:55.243551   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:44:55.243576   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:44:55.243587   25749 store.go:1428] Monitoring flunders.wardle.example.com count at <storage-prefix>//wardle.example.com/flunders
+I0422 21:44:55.243587   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:44:55.243621   25749 reflector.go:255] Listing and watching *wardle.Flunder from storage/cacher.go:/wardle.example.com/flunders
+I0422 21:44:55.243663   25749 client.go:360] parsed scheme: "endpoint"
+I0422 21:44:55.243674   25749 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{http://127.0.0.1:2379  <nil> 0 <nil>}]
+I0422 21:44:55.243680   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc00071c680, {CONNECTING <nil>}
+I0422 21:44:55.244229   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc00071c680, {READY <nil>}
+I0422 21:44:55.244331   25749 storage_factory.go:53] Storage caching is enabled for *wardle.Fischer
+I0422 21:44:55.244508   25749 store.go:1428] Monitoring fischers.wardle.example.com count at <storage-prefix>//wardle.example.com/fischers
+I0422 21:44:55.244512   25749 cacher.go:405] cacher (*wardle.Flunder): initialized
+I0422 21:44:55.244532   25749 watch_cache.go:550] Replace watchCache (rev: 7) 
+I0422 21:44:55.244560   25749 reflector.go:255] Listing and watching *wardle.Fischer from storage/cacher.go:/wardle.example.com/fischers
+I0422 21:44:55.244629   25749 client.go:360] parsed scheme: "endpoint"
+I0422 21:44:55.244642   25749 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{http://127.0.0.1:2379  <nil> 0 <nil>}]
+I0422 21:44:55.244662   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:44:55.244918   25749 cacher.go:405] cacher (*wardle.Fischer): initialized
+I0422 21:44:55.244931   25749 watch_cache.go:550] Replace watchCache (rev: 7) 
+I0422 21:44:55.244945   25749 storage_factory.go:53] Storage caching is enabled for *wardle.Flunder
+I0422 21:44:55.244991   25749 store.go:1428] Monitoring flunders.wardle.example.com count at <storage-prefix>//wardle.example.com/flunders
+I0422 21:44:55.245025   25749 reflector.go:255] Listing and watching *wardle.Flunder from storage/cacher.go:/wardle.example.com/flunders
+I0422 21:44:55.245564   25749 cacher.go:405] cacher (*wardle.Flunder): initialized
+I0422 21:44:55.245589   25749 watch_cache.go:550] Replace watchCache (rev: 7) 
+I0422 21:44:55.269521   25749 healthz.go:162] Installing health checkers for (/healthz): "ping","log","etcd","poststarthook/generic-apiserver-start-informers","poststarthook/priority-and-fairness-config-consumer","poststarthook/priority-and-fairness-filter","poststarthook/start-sample-server-informers"
+I0422 21:44:55.269965   25749 healthz.go:162] Installing health checkers for (/livez): "ping","log","etcd","poststarthook/generic-apiserver-start-informers","poststarthook/priority-and-fairness-config-consumer","poststarthook/priority-and-fairness-filter","poststarthook/start-sample-server-informers"
+I0422 21:44:55.270329   25749 healthz.go:162] Installing health checkers for (/readyz): "ping","log","etcd","poststarthook/generic-apiserver-start-informers","informer-sync","poststarthook/priority-and-fairness-config-consumer","poststarthook/priority-and-fairness-filter","poststarthook/start-sample-server-informers","shutdown"
+I0422 21:44:55.270925   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication
+I0422 21:44:55.270948   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.270955   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.270959   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.273498   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:44:55.273658   25749 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+I0422 21:44:55.273664   25749 dynamic_cafile_content.go:167] Starting client-ca-bundle::ca.crt
+I0422 21:44:55.273664   25749 configmap_cafile_content.go:202] Starting client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+I0422 21:44:55.273710   25749 shared_informer.go:240] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+I0422 21:44:55.273684   25749 shared_informer.go:240] Waiting for caches to sync for RequestHeaderAuthRequestController
+I0422 21:44:55.273815   25749 reflector.go:219] Starting reflector *v1.ConfigMap (12h0m0s) from k8s.io/apiserver/pkg/authentication/request/headerrequest/requestheader_controller.go:172
+I0422 21:44:55.273831   25749 reflector.go:255] Listing and watching *v1.ConfigMap from k8s.io/apiserver/pkg/authentication/request/headerrequest/requestheader_controller.go:172
+I0422 21:44:55.273816   25749 reflector.go:219] Starting reflector *v1.ConfigMap (12h0m0s) from k8s.io/apiserver/pkg/server/dynamiccertificates/configmap_cafile_content.go:206
+I0422 21:44:55.273853   25749 reflector.go:255] Listing and watching *v1.ConfigMap from k8s.io/apiserver/pkg/server/dynamiccertificates/configmap_cafile_content.go:206
+I0422 21:44:55.273830   25749 dynamic_serving_content.go:130] Starting serving-cert::apiserver.local.config/certificates/apiserver.crt::apiserver.local.config/certificates/apiserver.key
+I0422 21:44:55.273887   25749 tlsconfig.go:178] loaded client CA [0/"client-ca-bundle::ca.crt,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"]: "ks" [] groups=[ks] issuer="<self>" (2021-04-22 12:18:53 +0000 UTC to 2021-05-22 12:18:53 +0000 UTC (now=2021-04-22 13:44:55.27387 +0000 UTC))
+I0422 21:44:55.274301   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces/kube-system/configmaps?fieldSelector=metadata.name%3Dextension-apiserver-authentication&limit=500&resourceVersion=0
+I0422 21:44:55.274344   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.274354   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.274369   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.274412   25749 tlsconfig.go:200] loaded serving cert ["serving-cert::apiserver.local.config/certificates/apiserver.crt::apiserver.local.config/certificates/apiserver.key"]: "localhost@1619094187" [serving] validServingFor=[127.0.0.1,localhost,localhost] issuer="localhost-ca@1619094187" (2021-04-22 11:23:07 +0000 UTC to 2022-04-22 11:23:07 +0000 UTC (now=2021-04-22 13:44:55.27439 +0000 UTC))
+I0422 21:44:55.274458   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces/kube-system/configmaps?fieldSelector=metadata.name%3Dextension-apiserver-authentication&limit=500&resourceVersion=0
+I0422 21:44:55.274474   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.274487   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.274496   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.274648   25749 named_certificates.go:53] loaded SNI cert [0/"self-signed loopback"]: "apiserver-loopback-client@1619099095" [serving] validServingFor=[apiserver-loopback-client] issuer="apiserver-loopback-client-ca@1619099095" (2021-04-22 12:44:54 +0000 UTC to 2022-04-22 12:44:54 +0000 UTC (now=2021-04-22 13:44:55.274637 +0000 UTC))
+I0422 21:44:55.274703   25749 secure_serving.go:197] Serving securely on [::]:8443
+I0422 21:44:55.274828   25749 tlsconfig.go:240] Starting DynamicServingCertificateController
+I0422 21:44:55.274961   25749 apf_controller.go:294] Starting API Priority and Fairness config controller
+I0422 21:44:55.275175   25749 reflector.go:219] Starting reflector *v1beta1.FlowSchema (10m0s) from k8s.io/client-go/informers/factory.go:134
+I0422 21:44:55.275238   25749 reflector.go:255] Listing and watching *v1beta1.FlowSchema from k8s.io/client-go/informers/factory.go:134
+I0422 21:44:55.275232   25749 reflector.go:219] Starting reflector *v1alpha1.Fischer (0s) from sample-apiserver/pkg/generated/informers/externalversions/factory.go:117
+I0422 21:44:55.275591   25749 reflector.go:255] Listing and watching *v1alpha1.Fischer from sample-apiserver/pkg/generated/informers/externalversions/factory.go:117
+I0422 21:44:55.275499   25749 reflector.go:219] Starting reflector *v1.ValidatingWebhookConfiguration (10m0s) from k8s.io/client-go/informers/factory.go:134
+I0422 21:44:55.275638   25749 reflector.go:255] Listing and watching *v1.ValidatingWebhookConfiguration from k8s.io/client-go/informers/factory.go:134
+I0422 21:44:55.275646   25749 reflector.go:219] Starting reflector *v1.MutatingWebhookConfiguration (10m0s) from k8s.io/client-go/informers/factory.go:134
+I0422 21:44:55.275672   25749 reflector.go:255] Listing and watching *v1.MutatingWebhookConfiguration from k8s.io/client-go/informers/factory.go:134
+I0422 21:44:55.275675   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas?limit=500&resourceVersion=0
+I0422 21:44:55.275685   25749 reflector.go:219] Starting reflector *v1beta1.PriorityLevelConfiguration (10m0s) from k8s.io/client-go/informers/factory.go:134
+I0422 21:44:55.275718   25749 round_trippers.go:432] GET https://[::1]:8443/apis/wardle.example.com/v1alpha1/fischers?limit=500&resourceVersion=0
+I0422 21:44:55.275776   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.275791   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations?limit=500&resourceVersion=0
+I0422 21:44:55.275804   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.275827   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.275839   25749 round_trippers.go:442]     Authorization: Bearer <masked>
+I0422 21:44:55.275615   25749 reflector.go:219] Starting reflector *v1.Namespace (10m0s) from k8s.io/client-go/informers/factory.go:134
+I0422 21:44:55.275864   25749 reflector.go:255] Listing and watching *v1.Namespace from k8s.io/client-go/informers/factory.go:134
+I0422 21:44:55.275828   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.275896   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.275913   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.275728   25749 reflector.go:255] Listing and watching *v1beta1.PriorityLevelConfiguration from k8s.io/client-go/informers/factory.go:134
+I0422 21:44:55.275777   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations?limit=500&resourceVersion=0
+I0422 21:44:55.275992   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.275707   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.276024   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces?limit=500&resourceVersion=0
+I0422 21:44:55.276040   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.276048   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.276062   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.276125   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations?limit=500&resourceVersion=0
+I0422 21:44:55.276006   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.276178   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.276069   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.276230   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.276153   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.276285   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.276297   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.277121   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:44:55.277241   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:44:55.277648   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dextension-apiserver-authentication&resourceVersion=378809&timeout=7m34s&timeoutSeconds=454&watch=true
+I0422 21:44:55.277672   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.277679   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.277684   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.277704   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dextension-apiserver-authentication&resourceVersion=378809&timeout=9m4s&timeoutSeconds=544&watch=true
+I0422 21:44:55.277719   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.277733   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.277753   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.277857   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:44:55.277923   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:44:55.277936   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:44:55.277944   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:44:55.278576   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces?allowWatchBookmarks=true&resourceVersion=347244&timeout=6m4s&timeoutSeconds=364&watch=true
+I0422 21:44:55.278591   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:44:55.278605   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.278693   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.278725   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.279290   25749 apf_controller.go:762] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/fischers", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"", Resource:"fischers", Subresource:"", Name:"", Parts:[]string{"fischers"}}, User: &user.DefaultInfo{Name:"system:apiserver", UID:"10e74e52-ef3f-4f6f-a6af-5aedb70d72e5", Groups:[]string{"system:masters"}, Extra:map[string][]string(nil)}})
+I0422 21:44:55.279395   25749 apf_controller.go:792] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/fischers", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"", Resource:"fischers", Subresource:"", Name:"", Parts:[]string{"fischers"}}, User: &user.DefaultInfo{Name:"system:apiserver", UID:"10e74e52-ef3f-4f6f-a6af-5aedb70d72e5", Groups:[]string{"system:masters"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", immediate
+I0422 21:44:55.279452   25749 apf_filter.go:156] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/fischers", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"", Resource:"fischers", Subresource:"", Name:"", Parts:[]string{"fischers"}}, User: &user.DefaultInfo{Name:"system:apiserver", UID:"10e74e52-ef3f-4f6f-a6af-5aedb70d72e5", Groups:[]string{"system:masters"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false
+I0422 21:44:55.279528   25749 handler.go:143] sample-apiserver: GET "/apis/wardle.example.com/v1alpha1/fischers" satisfied by gorestful with webservice /apis/wardle.example.com/v1alpha1
+I0422 21:44:55.279904   25749 apf_filter.go:160] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/fischers", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"", Resource:"fischers", Subresource:"", Name:"", Parts:[]string{"fischers"}}, User: &user.DefaultInfo{Name:"system:apiserver", UID:"10e74e52-ef3f-4f6f-a6af-5aedb70d72e5", Groups:[]string{"system:masters"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false, Finish() => panicking=false idle=false
+I0422 21:44:55.279979   25749 httplog.go:96] "HTTP" verb="GET" URI="/apis/wardle.example.com/v1alpha1/fischers?limit=500&resourceVersion=0" latency="955.819µs" userAgent="kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format" audit-ID="8ff22d08-16da-41f5-be24-29f13f12f80b" srcIP="[::1]:50617" resp=200
+I0422 21:44:55.280159   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:44:55.280197   25749 round_trippers.go:457] Response Status: 200 OK in 4 milliseconds
+I0422 21:44:55.280671   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations?allowWatchBookmarks=true&resourceVersion=202330&timeout=6m54s&timeoutSeconds=414&watch=true
+I0422 21:44:55.280684   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.280677   25749 apf_controller.go:211] Triggered API priority and fairness config reloading in Controller due to creation of PLC catch-all
+I0422 21:44:55.280704   25749 apf_controller.go:211] Triggered API priority and fairness config reloading in Controller due to creation of PLC exempt
+I0422 21:44:55.280690   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.280713   25749 apf_controller.go:211] Triggered API priority and fairness config reloading in Controller due to creation of PLC global-default
+I0422 21:44:55.280717   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.280722   25749 apf_controller.go:211] Triggered API priority and fairness config reloading in Controller due to creation of PLC leader-election
+I0422 21:44:55.280751   25749 apf_controller.go:211] Triggered API priority and fairness config reloading in Controller due to creation of PLC system
+I0422 21:44:55.280761   25749 apf_controller.go:211] Triggered API priority and fairness config reloading in Controller due to creation of PLC workload-high
+I0422 21:44:55.280764   25749 round_trippers.go:432] GET https://[::1]:8443/apis/wardle.example.com/v1alpha1/fischers?allowWatchBookmarks=true&resourceVersion=7&timeout=6m35s&timeoutSeconds=395&watch=true
+I0422 21:44:55.280779   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.280770   25749 apf_controller.go:211] Triggered API priority and fairness config reloading in Controller due to creation of PLC workload-low
+I0422 21:44:55.280789   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.280823   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.280834   25749 round_trippers.go:442]     Authorization: Bearer <masked>
+I0422 21:44:55.281031   25749 priority-and-fairness.go:89] Serving RequestInfo=&request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/fischers", Verb:"watch", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"", Resource:"fischers", Subresource:"", Name:"", Parts:[]string{"fischers"}}, user.Info=&user.DefaultInfo{Name:"system:apiserver", UID:"10e74e52-ef3f-4f6f-a6af-5aedb70d72e5", Groups:[]string{"system:masters"}, Extra:map[string][]string(nil)} as longrunning
+I0422 21:44:55.281058   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations?allowWatchBookmarks=true&resourceVersion=202330&timeout=7m20s&timeoutSeconds=440&watch=true
+I0422 21:44:55.281074   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.281080   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.281085   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.281058   25749 handler.go:143] sample-apiserver: GET "/apis/wardle.example.com/v1alpha1/fischers" satisfied by gorestful with webservice /apis/wardle.example.com/v1alpha1
+I0422 21:44:55.281111   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations?allowWatchBookmarks=true&resourceVersion=202330&timeout=6m24s&timeoutSeconds=384&watch=true
+I0422 21:44:55.281127   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.281134   25749 apf_controller.go:233] Triggered API priority and fairness config reloading in Controller due to creation of FS kube-scheduler
+I0422 21:44:55.281223   25749 apf_controller.go:233] Triggered API priority and fairness config reloading in Controller due to creation of FS kube-system-service-accounts
+I0422 21:44:55.281226   25749 get.go:260] "Starting watch" path="/apis/wardle.example.com/v1alpha1/fischers" resourceVersion="7" labels="" fields="" timeout="6m35s"
+I0422 21:44:55.281260   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:44:55.281275   25749 round_trippers.go:457] Response Status: 200 OK in 3 milliseconds
+I0422 21:44:55.281148   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas?allowWatchBookmarks=true&resourceVersion=202330&timeout=6m27s&timeoutSeconds=387&watch=true
+I0422 21:44:55.281276   25749 apf_controller.go:233] Triggered API priority and fairness config reloading in Controller due to creation of FS system-nodes
+I0422 21:44:55.281357   25749 round_trippers.go:438] Request Headers:
+I0422 21:44:55.281397   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.281382   25749 apf_controller.go:233] Triggered API priority and fairness config reloading in Controller due to creation of FS catch-all
+I0422 21:44:55.281408   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.281418   25749 apf_controller.go:233] Triggered API priority and fairness config reloading in Controller due to creation of FS kube-controller-manager
+I0422 21:44:55.281431   25749 apf_controller.go:233] Triggered API priority and fairness config reloading in Controller due to creation of FS service-accounts
+I0422 21:44:55.281444   25749 apf_controller.go:233] Triggered API priority and fairness config reloading in Controller due to creation of FS system-leader-election
+I0422 21:44:55.281137   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:44:55.281480   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:44:55.281540   25749 round_trippers.go:457] Response Status: 200 OK in 0 milliseconds
+I0422 21:44:55.281456   25749 apf_controller.go:233] Triggered API priority and fairness config reloading in Controller due to creation of FS workload-leader-election
+I0422 21:44:55.281588   25749 apf_controller.go:233] Triggered API priority and fairness config reloading in Controller due to creation of FS exempt
+I0422 21:44:55.281630   25749 apf_controller.go:233] Triggered API priority and fairness config reloading in Controller due to creation of FS global-default
+I0422 21:44:55.282506   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:44:55.282930   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:44:55.283286   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:44:55.283663   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:44:55.375023   25749 shared_informer.go:270] caches populated
+I0422 21:44:55.375069   25749 shared_informer.go:270] caches populated
+I0422 21:44:55.375119   25749 apf_controller.go:299] Running API Priority and Fairness config worker
+I0422 21:44:55.375083   25749 shared_informer.go:247] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file 
+I0422 21:44:55.375199   25749 apf_controller.go:345] Controller syncOne at 2021-04-22T21:44:55.375
+I0422 21:44:55.375039   25749 shared_informer.go:270] caches populated
+I0422 21:44:55.375262   25749 shared_informer.go:247] Caches are synced for RequestHeaderAuthRequestController 
+I0422 21:44:55.375319   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"exempt","uid":"0a800a42-ee2d-4082-a973-56ee916e2617","resourceVersion":"82","generation":1,"creationTimestamp":"2021-04-11T13:31:44Z","managedFields":[{"manager":"api-priority-and-fairness-config-consumer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"Dangling\"}":{".":{},"f:lastTransitionTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}}}}},{"manager":"api-priority-and-fairness-config-producer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:matchingPrecedence":{},"f:priorityLevelConfiguration":{"f:name":{}},"f:rules":{}}}}]},"spec":{"priorityLevelConfiguration":{"name":"exempt"},"matchingPrecedence":1,"rules":[{"subjects":[{"kind":"Group","group":{"name":"system:masters"}}],"resourceRules":[{"verbs":["*"],"apiGroups":["*"],"resources":["*"],"clusterScope":true,"namespaces":["*"]}],"nonResourceRules":[{"verbs":["*"],"nonResourceURLs":["*"]}]}]},"status":{"conditions":[{"type":"Dangling","status":"False","lastTransitionTime":"2021-04-11T13:31:44Z","reason":"Found","message":"This FlowSchema references the PriorityLevelConfiguration object named \"exempt\" and it exists"}]}}
+I0422 21:44:55.375466   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"system-leader-election","uid":"0acbb8c1-2c85-4f0f-b12e-cc331f3893ce","resourceVersion":"74","generation":1,"creationTimestamp":"2021-04-11T13:31:44Z","managedFields":[{"manager":"api-priority-and-fairness-config-consumer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"Dangling\"}":{".":{},"f:lastTransitionTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}}}}},{"manager":"api-priority-and-fairness-config-producer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:distinguisherMethod":{".":{},"f:type":{}},"f:matchingPrecedence":{},"f:priorityLevelConfiguration":{"f:name":{}},"f:rules":{}}}}]},"spec":{"priorityLevelConfiguration":{"name":"leader-election"},"matchingPrecedence":100,"distinguisherMethod":{"type":"ByUser"},"rules":[{"subjects":[{"kind":"User","user":{"name":"system:kube-controller-manager"}},{"kind":"User","user":{"name":"system:kube-scheduler"}},{"kind":"ServiceAccount","serviceAccount":{"namespace":"kube-system","name":"*"}}],"resourceRules":[{"verbs":["get","create","update"],"apiGroups":[""],"resources":["endpoints","configmaps"],"namespaces":["kube-system"]},{"verbs":["get","create","update"],"apiGroups":["coordination.k8s.io"],"resources":["leases"],"namespaces":["*"]}]}]},"status":{"conditions":[{"type":"Dangling","status":"False","lastTransitionTime":"2021-04-11T13:31:44Z","reason":"Found","message":"This FlowSchema references the PriorityLevelConfiguration object named \"leader-election\" and it exists"}]}}
+I0422 21:44:55.375564   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"workload-leader-election","uid":"13b2510f-ec81-4df2-a03e-fa921ccc24fc","resourceVersion":"67","generation":1,"creationTimestamp":"2021-04-11T13:31:44Z","managedFields":[{"manager":"api-priority-and-fairness-config-consumer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"Dangling\"}":{".":{},"f:lastTransitionTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}}}}},{"manager":"api-priority-and-fairness-config-producer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:distinguisherMethod":{".":{},"f:type":{}},"f:matchingPrecedence":{},"f:priorityLevelConfiguration":{"f:name":{}},"f:rules":{}}}}]},"spec":{"priorityLevelConfiguration":{"name":"leader-election"},"matchingPrecedence":200,"distinguisherMethod":{"type":"ByUser"},"rules":[{"subjects":[{"kind":"ServiceAccount","serviceAccount":{"namespace":"kube-system","name":"*"}}],"resourceRules":[{"verbs":["get","create","update"],"apiGroups":[""],"resources":["endpoints","configmaps"],"namespaces":["*"]},{"verbs":["get","create","update"],"apiGroups":["coordination.k8s.io"],"resources":["leases"],"namespaces":["*"]}]}]},"status":{"conditions":[{"type":"Dangling","status":"False","lastTransitionTime":"2021-04-11T13:31:44Z","reason":"Found","message":"This FlowSchema references the PriorityLevelConfiguration object named \"leader-election\" and it exists"}]}}
+I0422 21:44:55.375615   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"system-nodes","uid":"40168718-12a7-46fd-a860-a4adb506612b","resourceVersion":"64","generation":1,"creationTimestamp":"2021-04-11T13:31:44Z","managedFields":[{"manager":"api-priority-and-fairness-config-consumer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"Dangling\"}":{".":{},"f:lastTransitionTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}}}}},{"manager":"api-priority-and-fairness-config-producer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:distinguisherMethod":{".":{},"f:type":{}},"f:matchingPrecedence":{},"f:priorityLevelConfiguration":{"f:name":{}},"f:rules":{}}}}]},"spec":{"priorityLevelConfiguration":{"name":"system"},"matchingPrecedence":500,"distinguisherMethod":{"type":"ByUser"},"rules":[{"subjects":[{"kind":"Group","group":{"name":"system:nodes"}}],"resourceRules":[{"verbs":["*"],"apiGroups":["*"],"resources":["*"],"clusterScope":true,"namespaces":["*"]}],"nonResourceRules":[{"verbs":["*"],"nonResourceURLs":["*"]}]}]},"status":{"conditions":[{"type":"Dangling","status":"False","lastTransitionTime":"2021-04-11T13:31:44Z","reason":"Found","message":"This FlowSchema references the PriorityLevelConfiguration object named \"system\" and it exists"}]}}
+I0422 21:44:55.375685   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"kube-controller-manager","uid":"acaf4684-a39f-421b-9855-7f885f2966dd","resourceVersion":"68","generation":1,"creationTimestamp":"2021-04-11T13:31:44Z","managedFields":[{"manager":"api-priority-and-fairness-config-consumer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"Dangling\"}":{".":{},"f:lastTransitionTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}}}}},{"manager":"api-priority-and-fairness-config-producer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:distinguisherMethod":{".":{},"f:type":{}},"f:matchingPrecedence":{},"f:priorityLevelConfiguration":{"f:name":{}},"f:rules":{}}}}]},"spec":{"priorityLevelConfiguration":{"name":"workload-high"},"matchingPrecedence":800,"distinguisherMethod":{"type":"ByNamespace"},"rules":[{"subjects":[{"kind":"User","user":{"name":"system:kube-controller-manager"}}],"resourceRules":[{"verbs":["*"],"apiGroups":["*"],"resources":["*"],"clusterScope":true,"namespaces":["*"]}],"nonResourceRules":[{"verbs":["*"],"nonResourceURLs":["*"]}]}]},"status":{"conditions":[{"type":"Dangling","status":"False","lastTransitionTime":"2021-04-11T13:31:44Z","reason":"Found","message":"This FlowSchema references the PriorityLevelConfiguration object named \"workload-high\" and it exists"}]}}
+I0422 21:44:55.375733   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"kube-scheduler","uid":"0617ac51-6d47-42f7-8483-5fee1d071f66","resourceVersion":"70","generation":1,"creationTimestamp":"2021-04-11T13:31:44Z","managedFields":[{"manager":"api-priority-and-fairness-config-consumer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"Dangling\"}":{".":{},"f:lastTransitionTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}}}}},{"manager":"api-priority-and-fairness-config-producer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:distinguisherMethod":{".":{},"f:type":{}},"f:matchingPrecedence":{},"f:priorityLevelConfiguration":{"f:name":{}},"f:rules":{}}}}]},"spec":{"priorityLevelConfiguration":{"name":"workload-high"},"matchingPrecedence":800,"distinguisherMethod":{"type":"ByNamespace"},"rules":[{"subjects":[{"kind":"User","user":{"name":"system:kube-scheduler"}}],"resourceRules":[{"verbs":["*"],"apiGroups":["*"],"resources":["*"],"clusterScope":true,"namespaces":["*"]}],"nonResourceRules":[{"verbs":["*"],"nonResourceURLs":["*"]}]}]},"status":{"conditions":[{"type":"Dangling","status":"False","lastTransitionTime":"2021-04-11T13:31:44Z","reason":"Found","message":"This FlowSchema references the PriorityLevelConfiguration object named \"workload-high\" and it exists"}]}}
+I0422 21:44:55.375781   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"kube-system-service-accounts","uid":"d4b93268-b247-4af7-89e7-c11907cee37c","resourceVersion":"72","generation":1,"creationTimestamp":"2021-04-11T13:31:44Z","managedFields":[{"manager":"api-priority-and-fairness-config-consumer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"Dangling\"}":{".":{},"f:lastTransitionTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}}}}},{"manager":"api-priority-and-fairness-config-producer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:distinguisherMethod":{".":{},"f:type":{}},"f:matchingPrecedence":{},"f:priorityLevelConfiguration":{"f:name":{}},"f:rules":{}}}}]},"spec":{"priorityLevelConfiguration":{"name":"workload-high"},"matchingPrecedence":900,"distinguisherMethod":{"type":"ByNamespace"},"rules":[{"subjects":[{"kind":"ServiceAccount","serviceAccount":{"namespace":"kube-system","name":"*"}}],"resourceRules":[{"verbs":["*"],"apiGroups":["*"],"resources":["*"],"clusterScope":true,"namespaces":["*"]}],"nonResourceRules":[{"verbs":["*"],"nonResourceURLs":["*"]}]}]},"status":{"conditions":[{"type":"Dangling","status":"False","lastTransitionTime":"2021-04-11T13:31:44Z","reason":"Found","message":"This FlowSchema references the PriorityLevelConfiguration object named \"workload-high\" and it exists"}]}}
+I0422 21:44:55.375843   25749 tlsconfig.go:178] loaded client CA [0/"client-ca-bundle::ca.crt,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"]: "ks" [] groups=[ks] issuer="<self>" (2021-04-22 12:18:53 +0000 UTC to 2021-05-22 12:18:53 +0000 UTC (now=2021-04-22 13:44:55.375818 +0000 UTC))
+I0422 21:44:55.375847   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"service-accounts","uid":"d4d7136c-9005-4c55-822e-7ef3bc5fc5ab","resourceVersion":"75","generation":1,"creationTimestamp":"2021-04-11T13:31:44Z","managedFields":[{"manager":"api-priority-and-fairness-config-consumer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"Dangling\"}":{".":{},"f:lastTransitionTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}}}}},{"manager":"api-priority-and-fairness-config-producer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:distinguisherMethod":{".":{},"f:type":{}},"f:matchingPrecedence":{},"f:priorityLevelConfiguration":{"f:name":{}},"f:rules":{}}}}]},"spec":{"priorityLevelConfiguration":{"name":"workload-low"},"matchingPrecedence":9000,"distinguisherMethod":{"type":"ByUser"},"rules":[{"subjects":[{"kind":"Group","group":{"name":"system:serviceaccounts"}}],"resourceRules":[{"verbs":["*"],"apiGroups":["*"],"resources":["*"],"clusterScope":true,"namespaces":["*"]}],"nonResourceRules":[{"verbs":["*"],"nonResourceURLs":["*"]}]}]},"status":{"conditions":[{"type":"Dangling","status":"False","lastTransitionTime":"2021-04-11T13:31:44Z","reason":"Found","message":"This FlowSchema references the PriorityLevelConfiguration object named \"workload-low\" and it exists"}]}}
+I0422 21:44:55.375930   25749 tlsconfig.go:178] loaded client CA [1/"client-ca-bundle::ca.crt,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"]: "front-proxy-ca" [] issuer="<self>" (2021-01-30 14:02:42 +0000 UTC to 2031-01-28 14:02:42 +0000 UTC (now=2021-04-22 13:44:55.375914 +0000 UTC))
+I0422 21:44:55.375957   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"global-default","uid":"6d3cade3-5f3b-43e3-a032-a95b856c5f32","resourceVersion":"77","generation":1,"creationTimestamp":"2021-04-11T13:31:44Z","managedFields":[{"manager":"api-priority-and-fairness-config-consumer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"Dangling\"}":{".":{},"f:lastTransitionTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}}}}},{"manager":"api-priority-and-fairness-config-producer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:distinguisherMethod":{".":{},"f:type":{}},"f:matchingPrecedence":{},"f:priorityLevelConfiguration":{"f:name":{}},"f:rules":{}}}}]},"spec":{"priorityLevelConfiguration":{"name":"global-default"},"matchingPrecedence":9900,"distinguisherMethod":{"type":"ByUser"},"rules":[{"subjects":[{"kind":"Group","group":{"name":"system:unauthenticated"}},{"kind":"Group","group":{"name":"system:authenticated"}}],"resourceRules":[{"verbs":["*"],"apiGroups":["*"],"resources":["*"],"clusterScope":true,"namespaces":["*"]}],"nonResourceRules":[{"verbs":["*"],"nonResourceURLs":["*"]}]}]},"status":{"conditions":[{"type":"Dangling","status":"False","lastTransitionTime":"2021-04-11T13:31:44Z","reason":"Found","message":"This FlowSchema references the PriorityLevelConfiguration object named \"global-default\" and it exists"}]}}
+I0422 21:44:55.376030   25749 apf_controller.go:575] Using FlowSchema {"metadata":{"name":"catch-all","uid":"52c1eac7-02da-4754-89f8-89fa206f9d5e","resourceVersion":"83","generation":1,"creationTimestamp":"2021-04-11T13:31:44Z","managedFields":[{"manager":"api-priority-and-fairness-config-consumer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"Dangling\"}":{".":{},"f:lastTransitionTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}}}}},{"manager":"api-priority-and-fairness-config-producer-v1","operation":"Update","apiVersion":"flowcontrol.apiserver.k8s.io/v1beta1","time":"2021-04-11T13:31:44Z","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:distinguisherMethod":{".":{},"f:type":{}},"f:matchingPrecedence":{},"f:priorityLevelConfiguration":{"f:name":{}},"f:rules":{}}}}]},"spec":{"priorityLevelConfiguration":{"name":"catch-all"},"matchingPrecedence":10000,"distinguisherMethod":{"type":"ByUser"},"rules":[{"subjects":[{"kind":"Group","group":{"name":"system:unauthenticated"}},{"kind":"Group","group":{"name":"system:authenticated"}}],"resourceRules":[{"verbs":["*"],"apiGroups":["*"],"resources":["*"],"clusterScope":true,"namespaces":["*"]}],"nonResourceRules":[{"verbs":["*"],"nonResourceURLs":["*"]}]}]},"status":{"conditions":[{"type":"Dangling","status":"False","lastTransitionTime":"2021-04-11T13:31:44Z","reason":"Found","message":"This FlowSchema references the PriorityLevelConfiguration object named \"catch-all\" and it exists"}]}}
+I0422 21:44:55.376081   25749 apf_controller.go:635] Using exempt priority level "exempt": quiescing=false
+I0422 21:44:55.376109   25749 apf_controller.go:646] Introducing queues for priority level "global-default": config={"type":"Limited","limited":{"assuredConcurrencyShares":20,"limitResponse":{"type":"Queue","queuing":{"queues":128,"handSize":6,"queueLengthLimit":50}}}}, concurrencyLimit=59, quiescing=false (shares=20, shareSum=205)
+I0422 21:44:55.376196   25749 apf_controller.go:646] Introducing queues for priority level "leader-election": config={"type":"Limited","limited":{"assuredConcurrencyShares":10,"limitResponse":{"type":"Queue","queuing":{"queues":16,"handSize":4,"queueLengthLimit":50}}}}, concurrencyLimit=30, quiescing=false (shares=10, shareSum=205)
+I0422 21:44:55.376256   25749 apf_controller.go:646] Introducing queues for priority level "system": config={"type":"Limited","limited":{"assuredConcurrencyShares":30,"limitResponse":{"type":"Queue","queuing":{"queues":64,"handSize":6,"queueLengthLimit":50}}}}, concurrencyLimit=88, quiescing=false (shares=30, shareSum=205)
+I0422 21:44:55.376320   25749 apf_controller.go:646] Introducing queues for priority level "workload-high": config={"type":"Limited","limited":{"assuredConcurrencyShares":40,"limitResponse":{"type":"Queue","queuing":{"queues":128,"handSize":6,"queueLengthLimit":50}}}}, concurrencyLimit=118, quiescing=false (shares=40, shareSum=205)
+I0422 21:44:55.376366   25749 tlsconfig.go:200] loaded serving cert ["serving-cert::apiserver.local.config/certificates/apiserver.crt::apiserver.local.config/certificates/apiserver.key"]: "localhost@1619094187" [serving] validServingFor=[127.0.0.1,localhost,localhost] issuer="localhost-ca@1619094187" (2021-04-22 11:23:07 +0000 UTC to 2022-04-22 11:23:07 +0000 UTC (now=2021-04-22 13:44:55.376334 +0000 UTC))
+I0422 21:44:55.376392   25749 apf_controller.go:646] Introducing queues for priority level "workload-low": config={"type":"Limited","limited":{"assuredConcurrencyShares":100,"limitResponse":{"type":"Queue","queuing":{"queues":128,"handSize":6,"queueLengthLimit":50}}}}, concurrencyLimit=293, quiescing=false (shares=100, shareSum=205)
+I0422 21:44:55.376483   25749 apf_controller.go:648] Retaining queues for priority level "catch-all": config={"type":"Limited","limited":{"assuredConcurrencyShares":5,"limitResponse":{"type":"Reject"}}}, concurrencyLimit=15, quiescing=false, numPending=0 (shares=5, shareSum=205)
+I0422 21:44:55.376715   25749 named_certificates.go:53] loaded SNI cert [0/"self-signed loopback"]: "apiserver-loopback-client@1619099095" [serving] validServingFor=[apiserver-loopback-client] issuer="apiserver-loopback-client-ca@1619099095" (2021-04-22 12:44:54 +0000 UTC to 2022-04-22 12:44:54 +0000 UTC (now=2021-04-22 13:44:55.376698 +0000 UTC))
+I0422 21:44:55.376808   25749 apf_controller.go:494] Switched to new API Priority and Fairness configuration
+I0422 21:44:55.906422   25749 client.go:360] parsed scheme: "endpoint"
+I0422 21:44:55.906582   25749 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{http://127.0.0.1:2379  <nil> 0 <nil>}]
+I0422 21:45:02.647197   25749 apf_controller.go:762] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}})
+I0422 21:45:02.647343   25749 apf_controller.go:792] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", immediate
+I0422 21:45:02.647363   25749 apf_filter.go:156] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false
+I0422 21:45:02.650336   25749 handler.go:143] sample-apiserver: GET "/apis/wardle.example.com/v1alpha1/namespaces/default/flunders" satisfied by gorestful with webservice /apis/wardle.example.com/v1alpha1
+I0422 21:45:02.650843   25749 apf_filter.go:160] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false, Finish() => panicking=false idle=false
+I0422 21:45:02.650896   25749 httplog.go:96] "HTTP" verb="GET" URI="/apis/wardle.example.com/v1alpha1/namespaces/default/flunders" latency="3.814528ms" userAgent="HTTPie/2.4.0" audit-ID="1222e04f-07b7-42ae-98dd-9e41eeedd6e8" srcIP="[::1]:50625" resp=200
+I0422 21:45:31.615382   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:45:31.615444   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:45:31.615454   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:45:31.615498   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc00091da40, {CONNECTING <nil>}
+I0422 21:45:31.615940   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc00091da40, {READY <nil>}
+I0422 21:45:31.616283   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:46:01.645102   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:46:01.645205   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:46:01.645235   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:46:01.645339   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c056c0, {CONNECTING <nil>}
+I0422 21:46:01.646234   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c056c0, {READY <nil>}
+I0422 21:46:01.646929   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:46:42.155889   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:46:42.155988   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:46:42.156019   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:46:42.156154   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0000d6d60, {CONNECTING <nil>}
+I0422 21:46:42.157054   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0000d6d60, {READY <nil>}
+I0422 21:46:42.157754   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:47:17.022189   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:47:17.022624   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:47:17.022678   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:47:17.022801   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c04650, {CONNECTING <nil>}
+I0422 21:47:17.023678   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c04650, {READY <nil>}
+I0422 21:47:17.024319   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:47:52.460428   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:47:52.460846   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:47:52.460905   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:47:52.461018   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000444c60, {CONNECTING <nil>}
+I0422 21:47:52.461962   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000444c60, {READY <nil>}
+I0422 21:47:52.462725   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:48:36.998795   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:48:36.998897   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:48:36.998934   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:48:36.999085   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0012909b0, {CONNECTING <nil>}
+I0422 21:48:37.000092   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0012909b0, {READY <nil>}
+I0422 21:48:37.000953   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:49:18.466707   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:49:18.467335   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:49:18.467387   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:49:18.467518   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c22340, {CONNECTING <nil>}
+I0422 21:49:18.468224   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c22340, {READY <nil>}
+I0422 21:49:18.468905   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:49:55.772902   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:49:55.773365   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:49:55.773404   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:49:55.773480   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c059a0, {CONNECTING <nil>}
+I0422 21:49:55.773953   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c059a0, {READY <nil>}
+I0422 21:49:55.774358   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:50:36.074552   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:50:36.074843   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:50:36.074864   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:50:36.074917   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0000d7dd0, {CONNECTING <nil>}
+I0422 21:50:36.075359   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0000d7dd0, {READY <nil>}
+I0422 21:50:36.075824   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:50:59.018925   25749 reflector.go:535] k8s.io/client-go/informers/factory.go:134: Watch close - *v1.Namespace total 0 items received
+I0422 21:50:59.019124   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces?allowWatchBookmarks=true&resourceVersion=347244&timeout=9m47s&timeoutSeconds=587&watch=true
+I0422 21:50:59.019154   25749 round_trippers.go:438] Request Headers:
+I0422 21:50:59.019189   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:50:59.019196   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:50:59.020770   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:51:14.225816   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:51:14.225861   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:51:14.225871   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:51:14.225914   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c04610, {CONNECTING <nil>}
+I0422 21:51:14.226224   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c04610, {READY <nil>}
+I0422 21:51:14.226558   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:51:19.007938   25749 reflector.go:535] k8s.io/client-go/informers/factory.go:134: Watch close - *v1.ValidatingWebhookConfiguration total 0 items received
+I0422 21:51:19.008118   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations?allowWatchBookmarks=true&resourceVersion=202330&timeout=5m25s&timeoutSeconds=325&watch=true
+I0422 21:51:19.008182   25749 round_trippers.go:438] Request Headers:
+I0422 21:51:19.008203   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:51:19.008219   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:51:19.011777   25749 round_trippers.go:457] Response Status: 200 OK in 3 milliseconds
+I0422 21:51:22.005528   25749 reflector.go:535] k8s.io/client-go/informers/factory.go:134: Watch close - *v1beta1.FlowSchema total 0 items received
+I0422 21:51:22.005732   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas?allowWatchBookmarks=true&resourceVersion=202330&timeout=6m6s&timeoutSeconds=366&watch=true
+I0422 21:51:22.005766   25749 round_trippers.go:438] Request Headers:
+I0422 21:51:22.005773   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:51:22.005778   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:51:22.007572   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:51:30.281222   25749 httplog.go:96] "HTTP" verb="GET" URI="/apis/wardle.example.com/v1alpha1/fischers?allowWatchBookmarks=true&resourceVersion=7&timeout=6m35s&timeoutSeconds=395&watch=true" latency="6m35.000497399s" userAgent="kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format" audit-ID="a65cca98-3093-4e68-84c7-3560cb955e2c" srcIP="[::1]:50617" resp=0
+I0422 21:51:30.281392   25749 reflector.go:535] sample-apiserver/pkg/generated/informers/externalversions/factory.go:117: Watch close - *v1alpha1.Fischer total 0 items received
+I0422 21:51:30.281465   25749 round_trippers.go:432] GET https://[::1]:8443/apis/wardle.example.com/v1alpha1/fischers?allowWatchBookmarks=true&resourceVersion=7&timeout=9m27s&timeoutSeconds=567&watch=true
+I0422 21:51:30.281476   25749 round_trippers.go:438] Request Headers:
+I0422 21:51:30.281483   25749 round_trippers.go:442]     Authorization: Bearer <masked>
+I0422 21:51:30.281489   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:51:30.281495   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:51:30.281697   25749 priority-and-fairness.go:89] Serving RequestInfo=&request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/fischers", Verb:"watch", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"", Resource:"fischers", Subresource:"", Name:"", Parts:[]string{"fischers"}}, user.Info=&user.DefaultInfo{Name:"system:apiserver", UID:"10e74e52-ef3f-4f6f-a6af-5aedb70d72e5", Groups:[]string{"system:masters"}, Extra:map[string][]string(nil)} as longrunning
+I0422 21:51:30.281733   25749 handler.go:143] sample-apiserver: GET "/apis/wardle.example.com/v1alpha1/fischers" satisfied by gorestful with webservice /apis/wardle.example.com/v1alpha1
+I0422 21:51:30.281777   25749 get.go:260] "Starting watch" path="/apis/wardle.example.com/v1alpha1/fischers" resourceVersion="7" labels="" fields="" timeout="9m27s"
+I0422 21:51:30.281965   25749 round_trippers.go:457] Response Status: 200 OK in 0 milliseconds
+I0422 21:51:48.984363   25749 reflector.go:535] k8s.io/client-go/informers/factory.go:134: Watch close - *v1beta1.PriorityLevelConfiguration total 0 items received
+I0422 21:51:48.987304   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations?allowWatchBookmarks=true&resourceVersion=202330&timeout=5m46s&timeoutSeconds=346&watch=true
+I0422 21:51:48.987320   25749 round_trippers.go:438] Request Headers:
+I0422 21:51:48.987328   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:51:48.987335   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:51:48.988654   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:51:52.048911   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:51:52.048994   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:51:52.049003   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:51:52.049067   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc001290690, {CONNECTING <nil>}
+I0422 21:51:52.049549   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc001290690, {READY <nil>}
+I0422 21:51:52.049961   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:52:14.966224   25749 reflector.go:535] k8s.io/client-go/informers/factory.go:134: Watch close - *v1.MutatingWebhookConfiguration total 0 items received
+I0422 21:52:14.966298   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations?allowWatchBookmarks=true&resourceVersion=202330&timeout=9m33s&timeoutSeconds=573&watch=true
+I0422 21:52:14.966307   25749 round_trippers.go:438] Request Headers:
+I0422 21:52:14.966312   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:52:14.966317   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:52:14.967642   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:52:25.828991   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:52:25.829090   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:52:25.829120   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:52:25.829223   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c23870, {CONNECTING <nil>}
+I0422 21:52:25.830149   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c23870, {READY <nil>}
+I0422 21:52:25.830815   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:52:28.954143   25749 reflector.go:535] k8s.io/apiserver/pkg/server/dynamiccertificates/configmap_cafile_content.go:206: Watch close - *v1.ConfigMap total 8 items received
+I0422 21:52:28.954343   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dextension-apiserver-authentication&resourceVersion=381016&timeout=5m24s&timeoutSeconds=324&watch=true
+I0422 21:52:28.954388   25749 round_trippers.go:438] Request Headers:
+I0422 21:52:28.954416   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:52:28.954438   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:52:28.956596   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:53:03.097675   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:53:03.097727   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:53:03.097739   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:53:03.097782   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc00082c340, {CONNECTING <nil>}
+I0422 21:53:03.098398   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc00082c340, {READY <nil>}
+I0422 21:53:03.098957   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:53:35.432856   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:53:35.432957   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:53:35.432990   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:53:35.433136   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc001606b00, {CONNECTING <nil>}
+I0422 21:53:35.433957   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc001606b00, {READY <nil>}
+I0422 21:53:35.434644   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:53:58.863238   25749 reflector.go:535] k8s.io/apiserver/pkg/authentication/request/headerrequest/requestheader_controller.go:172: Watch close - *v1.ConfigMap total 11 items received
+I0422 21:53:58.863515   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dextension-apiserver-authentication&resourceVersion=381461&timeout=8m40s&timeoutSeconds=520&watch=true
+I0422 21:53:58.863550   25749 round_trippers.go:438] Request Headers:
+I0422 21:53:58.863569   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:53:58.863581   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:53:58.866217   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:54:09.555687   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:54:09.555782   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:54:09.555820   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:54:09.555944   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc00082d560, {CONNECTING <nil>}
+I0422 21:54:09.556661   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc00082d560, {READY <nil>}
+I0422 21:54:09.557361   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:54:47.391379   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:54:47.391476   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:54:47.391508   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:54:47.391623   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000445a80, {CONNECTING <nil>}
+I0422 21:54:47.392517   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000445a80, {READY <nil>}
+I0422 21:54:47.393238   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:54:55.241512   25749 compact.go:160] etcd: compacted rev (7), endpoints ([http://127.0.0.1:2379])
+I0422 21:54:55.253742   25749 reflector.go:381] k8s.io/client-go/informers/factory.go:134: forcing resync
+I0422 21:54:55.253808   25749 reflector.go:381] k8s.io/client-go/informers/factory.go:134: forcing resync
+I0422 21:54:55.253878   25749 reflector.go:381] k8s.io/client-go/informers/factory.go:134: forcing resync
+I0422 21:54:55.253912   25749 reflector.go:381] k8s.io/client-go/informers/factory.go:134: forcing resync
+I0422 21:54:55.253881   25749 apf_controller.go:221] No trigger API priority and fairness config reloading in Controller due to spec non-change of PLC global-default
+I0422 21:54:55.254007   25749 apf_controller.go:221] No trigger API priority and fairness config reloading in Controller due to spec non-change of PLC leader-election
+I0422 21:54:55.254031   25749 apf_controller.go:259] No trigger of API priority and fairness config reloading in Controller due to spec and status non-change of FS workload-leader-election
+I0422 21:54:55.254048   25749 apf_controller.go:221] No trigger API priority and fairness config reloading in Controller due to spec non-change of PLC system
+I0422 21:54:55.254071   25749 apf_controller.go:259] No trigger of API priority and fairness config reloading in Controller due to spec and status non-change of FS exempt
+I0422 21:54:55.254137   25749 apf_controller.go:221] No trigger API priority and fairness config reloading in Controller due to spec non-change of PLC workload-high
+I0422 21:54:55.254207   25749 apf_controller.go:259] No trigger of API priority and fairness config reloading in Controller due to spec and status non-change of FS kube-scheduler
+I0422 21:54:55.254317   25749 apf_controller.go:259] No trigger of API priority and fairness config reloading in Controller due to spec and status non-change of FS kube-system-service-accounts
+I0422 21:54:55.254276   25749 apf_controller.go:221] No trigger API priority and fairness config reloading in Controller due to spec non-change of PLC workload-low
+I0422 21:54:55.254399   25749 apf_controller.go:221] No trigger API priority and fairness config reloading in Controller due to spec non-change of PLC catch-all
+I0422 21:54:55.254347   25749 apf_controller.go:259] No trigger of API priority and fairness config reloading in Controller due to spec and status non-change of FS kube-controller-manager
+I0422 21:54:55.254463   25749 apf_controller.go:259] No trigger of API priority and fairness config reloading in Controller due to spec and status non-change of FS system-leader-election
+I0422 21:54:55.254430   25749 apf_controller.go:221] No trigger API priority and fairness config reloading in Controller due to spec non-change of PLC exempt
+I0422 21:54:55.254508   25749 apf_controller.go:259] No trigger of API priority and fairness config reloading in Controller due to spec and status non-change of FS global-default
+I0422 21:54:55.254568   25749 apf_controller.go:259] No trigger of API priority and fairness config reloading in Controller due to spec and status non-change of FS system-nodes
+I0422 21:54:55.254608   25749 apf_controller.go:259] No trigger of API priority and fairness config reloading in Controller due to spec and status non-change of FS catch-all
+I0422 21:54:55.254645   25749 apf_controller.go:259] No trigger of API priority and fairness config reloading in Controller due to spec and status non-change of FS service-accounts
+I0422 21:55:28.014638   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:55:28.014972   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:55:28.014997   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:55:28.015071   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c22420, {CONNECTING <nil>}
+I0422 21:55:28.015536   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c22420, {READY <nil>}
+I0422 21:55:28.015938   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:56:06.037291   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:56:06.037348   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:56:06.037360   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:56:06.037430   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0000d7b60, {CONNECTING <nil>}
+I0422 21:56:06.037851   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0000d7b60, {READY <nil>}
+I0422 21:56:06.038323   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:56:36.922265   25749 apf_controller.go:762] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}})
+I0422 21:56:36.922514   25749 apf_controller.go:792] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", immediate
+I0422 21:56:36.922544   25749 apf_filter.go:156] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false
+I0422 21:56:36.922914   25749 handler.go:143] sample-apiserver: GET "/apis/wardle.example.com/v1alpha1/namespaces/default/flunders" satisfied by gorestful with webservice /apis/wardle.example.com/v1alpha1
+I0422 21:56:36.923458   25749 apf_filter.go:160] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false, Finish() => panicking=false idle=false
+I0422 21:56:36.923529   25749 httplog.go:96] "HTTP" verb="GET" URI="/apis/wardle.example.com/v1alpha1/namespaces/default/flunders" latency="1.364283ms" userAgent="HTTPie/2.4.0" audit-ID="6be7e642-7d6a-4bae-a5a8-6a896e29f4bb" srcIP="[::1]:50948" resp=200
+I0422 21:56:43.750407   25749 reflector.go:535] k8s.io/client-go/informers/factory.go:134: Watch close - *v1.ValidatingWebhookConfiguration total 0 items received
+I0422 21:56:43.750649   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations?allowWatchBookmarks=true&resourceVersion=202330&timeout=7m54s&timeoutSeconds=474&watch=true
+I0422 21:56:43.750679   25749 round_trippers.go:438] Request Headers:
+I0422 21:56:43.750696   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:56:43.750707   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:56:43.753164   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:56:46.749019   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:56:46.749211   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:56:46.749257   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:56:46.749416   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc001607370, {CONNECTING <nil>}
+I0422 21:56:46.750628   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc001607370, {READY <nil>}
+I0422 21:56:46.751541   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:57:27.716258   25749 reflector.go:535] k8s.io/client-go/informers/factory.go:134: Watch close - *v1beta1.FlowSchema total 0 items received
+I0422 21:57:27.716542   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas?allowWatchBookmarks=true&resourceVersion=202330&timeout=6m25s&timeoutSeconds=385&watch=true
+I0422 21:57:27.716557   25749 round_trippers.go:438] Request Headers:
+I0422 21:57:27.716591   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:57:27.716598   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:57:27.718126   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 21:57:29.513049   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:57:29.513144   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:57:29.513175   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:57:29.513295   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c22400, {CONNECTING <nil>}
+I0422 21:57:29.514029   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c22400, {READY <nil>}
+I0422 21:57:29.514720   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:57:34.712971   25749 reflector.go:535] k8s.io/client-go/informers/factory.go:134: Watch close - *v1beta1.PriorityLevelConfiguration total 0 items received
+I0422 21:57:34.713169   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations?allowWatchBookmarks=true&resourceVersion=202330&timeout=7m39s&timeoutSeconds=459&watch=true
+I0422 21:57:34.713212   25749 round_trippers.go:438] Request Headers:
+I0422 21:57:34.713237   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:57:34.713261   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:57:34.715529   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:57:52.696804   25749 reflector.go:535] k8s.io/apiserver/pkg/server/dynamiccertificates/configmap_cafile_content.go:206: Watch close - *v1.ConfigMap total 6 items received
+I0422 21:57:52.696998   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dextension-apiserver-authentication&resourceVersion=382602&timeout=7m59s&timeoutSeconds=479&watch=true
+I0422 21:57:52.697035   25749 round_trippers.go:438] Request Headers:
+I0422 21:57:52.697065   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 21:57:52.697088   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 21:57:52.699895   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 21:58:12.195156   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:58:12.195199   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:58:12.195211   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:58:12.195250   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc001606d60, {CONNECTING <nil>}
+I0422 21:58:12.195588   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc001606d60, {READY <nil>}
+I0422 21:58:12.196027   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:58:46.761618   25749 apf_controller.go:762] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}})
+I0422 21:58:46.761696   25749 apf_controller.go:792] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", immediate
+I0422 21:58:46.761719   25749 apf_filter.go:156] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false
+I0422 21:58:46.761872   25749 handler.go:143] sample-apiserver: GET "/apis/wardle.example.com/v1alpha1/namespaces/default/flunders" satisfied by gorestful with webservice /apis/wardle.example.com/v1alpha1
+I0422 21:58:46.762333   25749 apf_filter.go:160] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false, Finish() => panicking=false idle=false
+I0422 21:58:46.762382   25749 httplog.go:96] "HTTP" verb="GET" URI="/apis/wardle.example.com/v1alpha1/namespaces/default/flunders" latency="864.44µs" userAgent="HTTPie/2.4.0" audit-ID="e6562072-1656-4279-8d26-c090ce3deba7" srcIP="[::1]:50994" resp=200
+I0422 21:58:48.690946   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:58:48.690990   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:58:48.691001   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:58:48.691046   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c23410, {CONNECTING <nil>}
+I0422 21:58:48.691492   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c23410, {READY <nil>}
+I0422 21:58:48.691810   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:59:05.962538   25749 apf_controller.go:762] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}})
+I0422 21:59:05.962601   25749 apf_controller.go:792] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", immediate
+I0422 21:59:05.962623   25749 apf_filter.go:156] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false
+I0422 21:59:05.966535   25749 handler.go:143] sample-apiserver: GET "/apis/wardle.example.com/v1alpha1/namespaces/default/flunders" satisfied by gorestful with webservice /apis/wardle.example.com/v1alpha1
+I0422 21:59:05.966979   25749 apf_filter.go:160] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false, Finish() => panicking=false idle=false
+I0422 21:59:05.967035   25749 httplog.go:96] "HTTP" verb="GET" URI="/apis/wardle.example.com/v1alpha1/namespaces/default/flunders" latency="4.590616ms" userAgent="HTTPie/2.4.0" audit-ID="3b0d547a-da2b-4b6d-b30b-64adfb0c351e" srcIP="[::1]:51003" resp=200
+I0422 21:59:07.284142   25749 apf_controller.go:762] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}})
+I0422 21:59:07.284200   25749 apf_controller.go:792] startRequest(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", immediate
+I0422 21:59:07.284224   25749 apf_filter.go:156] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false
+I0422 21:59:07.284525   25749 handler.go:143] sample-apiserver: GET "/apis/wardle.example.com/v1alpha1/namespaces/default/flunders" satisfied by gorestful with webservice /apis/wardle.example.com/v1alpha1
+I0422 21:59:07.285098   25749 apf_filter.go:160] Handle(RequestDigest{RequestInfo: &request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/namespaces/default/flunders", Verb:"list", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"default", Resource:"flunders", Subresource:"", Name:"", Parts:[]string{"flunders"}}, User: &user.DefaultInfo{Name:"development", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)}}) => fsName="exempt", distMethod=(*v1beta1.FlowDistinguisherMethod)(nil), plName="exempt", isExempt=true, queued=false, Finish() => panicking=false idle=false
+I0422 21:59:07.285168   25749 httplog.go:96] "HTTP" verb="GET" URI="/apis/wardle.example.com/v1alpha1/namespaces/default/flunders" latency="1.117163ms" userAgent="HTTPie/2.4.0" audit-ID="ecb180bb-6f46-4e1b-9733-777f671f16c1" srcIP="[::1]:51005" resp=200
+I0422 21:59:32.276276   25749 client.go:360] parsed scheme: "passthrough"
+I0422 21:59:32.276324   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 21:59:32.276335   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 21:59:32.276377   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0002cf550, {CONNECTING <nil>}
+I0422 21:59:32.276713   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0002cf550, {READY <nil>}
+I0422 21:59:32.277130   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 21:59:55.263880   25749 compact.go:160] etcd: compacted rev (8), endpoints ([http://127.0.0.1:2379])
+I0422 22:00:12.140662   25749 client.go:360] parsed scheme: "passthrough"
+I0422 22:00:12.140997   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 22:00:12.141026   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 22:00:12.141077   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0002cfff0, {CONNECTING <nil>}
+I0422 22:00:12.141535   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0002cfff0, {READY <nil>}
+I0422 22:00:12.141941   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 22:00:45.569296   25749 reflector.go:535] k8s.io/client-go/informers/factory.go:134: Watch close - *v1.Namespace total 0 items received
+I0422 22:00:45.569665   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces?allowWatchBookmarks=true&resourceVersion=347244&timeout=7m24s&timeoutSeconds=444&watch=true
+I0422 22:00:45.569677   25749 round_trippers.go:438] Request Headers:
+I0422 22:00:45.569685   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 22:00:45.569691   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 22:00:45.571721   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 22:00:56.168633   25749 client.go:360] parsed scheme: "passthrough"
+I0422 22:00:56.168689   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 22:00:56.168704   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 22:00:56.168764   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0000d6e20, {CONNECTING <nil>}
+I0422 22:00:56.169090   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc0000d6e20, {READY <nil>}
+I0422 22:00:56.169433   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 22:00:57.253591   25749 httplog.go:96] "HTTP" verb="GET" URI="/apis/wardle.example.com/v1alpha1/fischers?allowWatchBookmarks=true&resourceVersion=7&timeout=9m27s&timeoutSeconds=567&watch=true" latency="9m27.001001241s" userAgent="kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format" audit-ID="7fe48e70-aac0-4d8a-af3c-80a4e644cb1a" srcIP="[::1]:50617" resp=0
+I0422 22:00:57.253911   25749 reflector.go:535] sample-apiserver/pkg/generated/informers/externalversions/factory.go:117: Watch close - *v1alpha1.Fischer total 0 items received
+I0422 22:00:57.254066   25749 round_trippers.go:432] GET https://[::1]:8443/apis/wardle.example.com/v1alpha1/fischers?allowWatchBookmarks=true&resourceVersion=7&timeout=8m29s&timeoutSeconds=509&watch=true
+I0422 22:00:57.254098   25749 round_trippers.go:438] Request Headers:
+I0422 22:00:57.254127   25749 round_trippers.go:442]     Authorization: Bearer <masked>
+I0422 22:00:57.254151   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 22:00:57.254173   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 22:00:57.254688   25749 priority-and-fairness.go:89] Serving RequestInfo=&request.RequestInfo{IsResourceRequest:true, Path:"/apis/wardle.example.com/v1alpha1/fischers", Verb:"watch", APIPrefix:"apis", APIGroup:"wardle.example.com", APIVersion:"v1alpha1", Namespace:"", Resource:"fischers", Subresource:"", Name:"", Parts:[]string{"fischers"}}, user.Info=&user.DefaultInfo{Name:"system:apiserver", UID:"10e74e52-ef3f-4f6f-a6af-5aedb70d72e5", Groups:[]string{"system:masters"}, Extra:map[string][]string(nil)} as longrunning
+I0422 22:00:57.254789   25749 handler.go:143] sample-apiserver: GET "/apis/wardle.example.com/v1alpha1/fischers" satisfied by gorestful with webservice /apis/wardle.example.com/v1alpha1
+I0422 22:00:57.254903   25749 get.go:260] "Starting watch" path="/apis/wardle.example.com/v1alpha1/fischers" resourceVersion="7" labels="" fields="" timeout="8m29s"
+I0422 22:00:57.255316   25749 round_trippers.go:457] Response Status: 200 OK in 1 milliseconds
+I0422 22:01:28.386464   25749 client.go:360] parsed scheme: "passthrough"
+I0422 22:01:28.386572   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 22:01:28.386607   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 22:01:28.386722   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c22bc0, {CONNECTING <nil>}
+I0422 22:01:28.387570   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc000c22bc0, {READY <nil>}
+I0422 22:01:28.388256   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 22:01:47.526424   25749 reflector.go:535] k8s.io/client-go/informers/factory.go:134: Watch close - *v1.MutatingWebhookConfiguration total 0 items received
+I0422 22:01:47.526643   25749 round_trippers.go:432] GET https://127.0.0.1:55000/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations?allowWatchBookmarks=true&resourceVersion=202330&timeout=9m57s&timeoutSeconds=597&watch=true
+I0422 22:01:47.526687   25749 round_trippers.go:438] Request Headers:
+I0422 22:01:47.526714   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 22:01:47.526742   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 22:01:47.528781   25749 round_trippers.go:457] Response Status: 200 OK in 2 milliseconds
+I0422 22:02:04.228862   25749 client.go:360] parsed scheme: "passthrough"
+I0422 22:02:04.228907   25749 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{http://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I0422 22:02:04.228919   25749 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I0422 22:02:04.228961   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc00082ce50, {CONNECTING <nil>}
+I0422 22:02:04.229342   25749 balancer_conn_wrappers.go:78] pickfirstBalancer: HandleSubConnStateChange: 0xc00082ce50, {READY <nil>}
+I0422 22:02:04.229878   25749 controlbuf.go:508] transport: loopyWriter.run returning. connection error: desc = "transport is closing"
+I0422 22:02:38.489998   25749 reflector.go:535] k8s.io/apiserver/pkg/authentication/request/headerrequest/requestheader_controller.go:172: Watch close - *v1.ConfigMap total 10 items received
+I0422 22:02:38.490186   25749 round_trippers.go:432] GET https://127.0.0.1:55000/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dextension-apiserver-authentication&resourceVersion=384004&timeout=7m51s&timeoutSeconds=471&watch=true
+I0422 22:02:38.490226   25749 round_trippers.go:438] Request Headers:
+I0422 22:02:38.490254   25749 round_trippers.go:442]     Accept: application/json, */*
+I0422 22:02:38.490278   25749 round_trippers.go:442]     User-Agent: kube-sample-apiserver-darwin/v0.0.0 (darwin/amd64) kubernetes/$Format
+I0422 22:02:38.493710   25749 round_trippers.go:457] Response Status: 200 OK in 3 milliseconds
